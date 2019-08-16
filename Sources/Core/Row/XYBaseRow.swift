@@ -55,7 +55,8 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
         return view
     }()
     public private(set) lazy var arrowImageView: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "XYEureka_Arrow"))
+        let bundle = Bundle(for: _XYBaseCell.self)
+        let view = UIImageView(image: UIImage(named: "Arrow", in: bundle, compatibleWith: nil))
         view.isHidden = true
         return view
     }()
