@@ -25,6 +25,7 @@
 		A5DA09DB22FD11F9008B6C89 /* XYTextLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA09DA22FD11F9008B6C89 /* XYTextLimit.swift */; };
 		A5DB89AC22FC267B00B00254 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881CF822FBBEF000A3A64F /* Eureka.framework */; };
 		A5DB89AD22FC267B00B00254 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881D0622FBC79F00A3A64F /* SnapKit.framework */; };
+		A5F019732306814600EB8E5A /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F019722306814600EB8E5A /* Asset.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		A5881D1722FBF0B000A3A64F /* XYPickerRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYPickerRowType.swift; sourceTree = "<group>"; };
 		A5881D1922FBF15600A3A64F /* XYDatePickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYDatePickerRow.swift; sourceTree = "<group>"; };
 		A5DA09DA22FD11F9008B6C89 /* XYTextLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYTextLimit.swift; sourceTree = "<group>"; };
+		A5F019722306814600EB8E5A /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A5881CF522FBBDCE00A3A64F /* Row */,
 				A5881CF422FBBDC800A3A64F /* Protocol */,
 				A5881CF322FBBDC400A3A64F /* Extension */,
+				A5F019712306812E00EB8E5A /* Resource */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -151,6 +154,14 @@
 				A5881CF822FBBEF000A3A64F /* Eureka.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5F019712306812E00EB8E5A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A5F019722306814600EB8E5A /* Asset.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F019732306814600EB8E5A /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
