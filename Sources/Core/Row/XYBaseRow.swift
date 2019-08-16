@@ -87,7 +87,12 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
         // super.update() 执行的内容
         selectionStyle = row.isDisabled ? .none : .default
         titleLabel.text = row.title
-        subLabel.text = row.displayValueFor?(row.value) ?? (row as? NoValueDisplayTextConformance)?.noValueDisplayText
+        
+        if let displayText = row.displayValueFor?(row.value), !displayText.isEmpty {
+            subLabel.text = displayText
+        } else {
+            subLabel.text = (row as? NoValueDisplayTextConformance)?.noValueDisplayText
+        }
         
         layoutView()
     }

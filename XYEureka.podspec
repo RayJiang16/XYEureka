@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYEureka'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Extension of Eureka'
 
   s.homepage         = 'https://github.com/RayJiang16/XYEureka'
