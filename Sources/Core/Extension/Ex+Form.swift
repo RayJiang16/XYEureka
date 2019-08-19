@@ -10,6 +10,18 @@ import Eureka
 
 extension Form {
     
+    public func setEnabled(_ enabled: Bool) {
+        for section in allSections {
+            section.setEnabled(enabled)
+        }
+    }
+    
+    public func setHidden(_ hidden: Bool) {
+        for section in allSections {
+            section.setHidden(hidden)
+        }
+    }
+    
     public func evaluateHidden() {
         for section in allSections {
             for row in section.allRows {
