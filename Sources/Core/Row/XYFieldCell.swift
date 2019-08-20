@@ -56,6 +56,7 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
     }
     
     open override func update() {
+        selectionStyle = row.isDisabled ? .none : .default
         if row.isDisabled {
             hasMust = false
         }

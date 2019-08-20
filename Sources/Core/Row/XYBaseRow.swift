@@ -85,6 +85,7 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
     
     override open func update() {
         // super.update() 执行的内容
+        selectionStyle = row.isDisabled ? .none : .default
         if row.isDisabled {
             hasMust = false
         }
