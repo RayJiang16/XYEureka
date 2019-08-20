@@ -56,7 +56,9 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
     }
     
     open override func update() {
-        selectionStyle = row.isDisabled ? .none : .default
+        if row.isDisabled {
+            hasMust = false
+        }
         titleLabel.text = row.title
         titleLabel.textColor = row.isHighlighted ? tintColor : .mainText
         super.layoutSubviews()

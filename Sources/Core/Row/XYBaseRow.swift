@@ -85,7 +85,9 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
     
     override open func update() {
         // super.update() 执行的内容
-        selectionStyle = row.isDisabled ? .none : .default
+        if row.isDisabled {
+            hasMust = false
+        }
         titleLabel.text = row.title
         
         if let displayText = row.displayValueFor?(row.value), !displayText.isEmpty {
@@ -119,14 +121,14 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
         addSubview(lineView)
         
         titleLabel.snp.makeConstraints { (maker) in
+            maker.top.bottom.equalToSuperview()
             maker.left.equalTo(mustDot.snp.right).offset(2)
             maker.right.equalToSuperview().offset(-10)
-            maker.centerY.equalToSuperview()
         }
         subLabel.snp.makeConstraints { (maker) in
+            maker.top.bottom.equalToSuperview()
             maker.left.equalTo(snp.centerX).offset(-100)
             maker.right.equalTo(arrowImageView.snp.left).offset(-5)
-            maker.centerY.equalToSuperview()
         }
         lineView.snp.makeConstraints { (maker) in
             maker.left.equalToSuperview().offset(15)
