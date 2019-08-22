@@ -122,12 +122,12 @@ open class _XYDatePickerCell: _XYBaseCell<Date>, UIPickerViewDataSource, UIPicke
             selectYear = yearIdx
             picker.selectRow(selectYear, inComponent: 0, animated: false)
             monthList = getMonth()
-            guard monthList.count > 0 else { return }
+            guard monthList.count > 0, (style == .month || style == .day) else { return }
             guard let monthIdx = monthList.firstIndex(where: { $0 == initMonth }) else { return }
             selectMonth = monthIdx
             picker.selectRow(selectMonth, inComponent: 1, animated: false)
             dayList = getDay()
-            guard dayList.count > 0 else { return }
+            guard dayList.count > 0, style == .day else { return }
             guard let dayIdx = dayList.firstIndex(where: { $0 == initDay }) else { return }
             selectDay = dayIdx
             picker.selectRow(selectDay, inComponent: 2, animated: false)
