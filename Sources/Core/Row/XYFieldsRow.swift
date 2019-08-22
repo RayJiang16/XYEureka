@@ -43,6 +43,22 @@ public final class XYIntRow: XYFieldRow<XYIntCell>, RowType {
     }
 }
 
+
+open class XYIntTextCell: _XYFieldCell<String> {
+    open override func setup() {
+        super.setup()
+        textField.autocorrectionType = .default
+        textField.autocapitalizationType = .none
+        textField.keyboardType = .numberPad
+    }
+}
+
+public final class XYIntTextRow: XYFieldRow<XYIntTextCell>, RowType {
+    public required init(tag: String?) {
+        super.init(tag: tag)
+    }
+}
+
 // MARK: - Decimal Cell
 
 open class XYDecimalCell: _XYFieldCell<Double> {
@@ -75,6 +91,21 @@ public final class XYMoneyRow: XYFieldRow<XYDecimalCell>, RowType {
         numberFormatter.numberStyle = .decimal
         numberFormatter.minimumFractionDigits = 2
         formatter = numberFormatter
+    }
+}
+
+
+open class XYDecimalTextCell: _XYFieldCell<String> {
+    open override func setup() {
+        super.setup()
+        textField.autocorrectionType = .no
+        textField.keyboardType = .decimalPad
+    }
+}
+
+public final class XYDecimalTextRow: XYFieldRow<XYDecimalTextCell>, RowType {
+    public required init(tag: String?) {
+        super.init(tag: tag)
     }
 }
 
