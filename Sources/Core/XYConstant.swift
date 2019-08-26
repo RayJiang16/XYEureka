@@ -19,6 +19,8 @@ public class XYConstant {
     private var subText: UIColor?
     private var redText: UIColor?
     private var lineColor: UIColor?
+    private var hiddenMustDotWhenDisabled: Bool = true
+    
     
     public static var mainText: UIColor {
         get {
@@ -50,6 +52,13 @@ public class XYConstant {
             return UIColor.lineColor
         } set {
             shared.lineColor = newValue
+        }
+    }
+    public static var hiddenMustDotWhenDisabled: Bool {
+        get {
+            return shared.hiddenMustDotWhenDisabled
+        } set {
+            shared.hiddenMustDotWhenDisabled = newValue
         }
     }
     
