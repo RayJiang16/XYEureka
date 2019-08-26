@@ -17,10 +17,14 @@ public enum XYDatePickerStyle: Int {
 
 open class _XYDatePickerCell: _XYBaseCell<Date>, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    public var style: XYDatePickerStyle = .day
     public var minDate: Date = Date(timeIntervalSince1970: 946656000)  // 2000-01-01
     public var maxDate: Date = Date(timeIntervalSince1970: 4102415999) // 2099-12-31
-    public var initDate: Date = Date()
-    public var style: XYDatePickerStyle = .day
+    public var initDate: Date = Date() {
+        didSet {
+            pickerRow?.value = initDate
+        }
+    }
     
     private var yearList: [Int] = []
     private var monthList: [Int] = []
@@ -120,17 +124,26 @@ open class _XYDatePickerCell: _XYBaseCell<Date>, UIPickerViewDataSource, UIPicke
             guard yearList.count > 0 else { return }
             guard let yearIdx = yearList.firstIndex(where: { $0 == initYear }) else { return }
             selectYear = yearIdx
-            picker.selectRow(selectYear, inComponent: 0, animated: false)
             monthList = getMonth()
-            guard monthList.count > 0, (style == .month || style == .day) else { return }
-            guard let monthIdx = monthList.firstIndex(where: { $0 == initMonth }) else { return }
+            guard monthList.count > 0, (style == .month || style == .day) else { selectDate(); return }
+            guard let monthIdx = monthList.firstIndex(where: { $0 == initMonth }) else { selectDate(); return }
             selectMonth = monthIdx
-            picker.selectRow(selectMonth, inComponent: 1, animated: false)
             dayList = getDay()
-            guard dayList.count > 0, style == .day else { return }
-            guard let dayIdx = dayList.firstIndex(where: { $0 == initDay }) else { return }
+            guard dayList.count > 0, style == .day else { selectDate(); return }
+            guard let dayIdx = dayList.firstIndex(where: { $0 == initDay }) else { selectDate(); return }
             selectDay = dayIdx
-            picker.selectRow(selectDay, inComponent: 2, animated: false)
+            selectDate()
+        }
+    }
+    
+    private func selectDate() {
+        picker.reloadAllComponents()
+        picker.selectRow(selectYear, inComponent: 0, animated: false)
+        if style == .month || style == .day {
+            picker.selectRow(selectMonth, inComponent: 1, animated: false)
+            if style == .day {
+                picker.selectRow(selectDay, inComponent: 2, animated: false)
+            }
         }
     }
     
@@ -244,19 +257,25 @@ open class _XYDatePickerCell: _XYBaseCell<Date>, UIPickerViewDataSource, UIPicke
         switch type {
         case .year:
             selectYear = row
-            monthList = getMonth()
-            if selectMonth >= monthList.count {
-                selectMonth = monthList.count-1
-            }
-            dayList = getDay()
-            if selectDay >= dayList.count {
-                selectDay = dayList.count-1
+            if style == .month || style == .day {
+                monthList = getMonth()
+                if selectMonth >= monthList.count {
+                    selectMonth = monthList.count-1
+                }
+                if style == .day {
+                    dayList = getDay()
+                    if selectDay >= dayList.count {
+                        selectDay = dayList.count-1
+                    }
+                }
             }
         case .month:
             selectMonth = row
-            dayList = getDay()
-            if selectDay >= dayList.count {
-                selectDay = dayList.count-1
+            if style == .day {
+                dayList = getDay()
+                if selectDay >= dayList.count {
+                    selectDay = dayList.count-1
+                }
             }
         case .day:
             selectDay = row
