@@ -36,6 +36,7 @@ extension Form {
         for row in section.allRows {
             row.evaluateHidden()
         }
+        section.evaluateHidden()
     }
     
     
