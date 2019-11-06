@@ -67,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A521BE74237259180042F919 /* XYEureka.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XYEureka.podspec; sourceTree = "<group>"; };
 		A56D991123029B8D00234FC5 /* Ex+Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Form.swift"; sourceTree = "<group>"; };
 		A56D99142302A25800234FC5 /* Ex+Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Condition.swift"; sourceTree = "<group>"; };
 		A5881CDC22FBBA9E00A3A64F /* XYEureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XYEureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +125,7 @@
 		A5881CD222FBBA9E00A3A64F = {
 			isa = PBXGroup;
 			children = (
+				A521BE74237259180042F919 /* XYEureka.podspec */,
 				A5881CDE22FBBA9E00A3A64F /* Sources */,
 				A5CA2368231379F0003E4E57 /* Example */,
 				A5881CDD22FBBA9E00A3A64F /* Products */,
@@ -553,7 +555,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.11;
+				MARKETING_VERSION = 1.0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RayJiang.XYEureka;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -585,7 +587,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.11;
+				MARKETING_VERSION = 1.0.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RayJiang.XYEureka;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
