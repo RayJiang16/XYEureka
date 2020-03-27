@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XYEureka'
-  s.version          = '1.0.12'
+  s.version          = '1.1.0'
   s.summary          = 'Extension of Eureka'
 
   s.homepage         = 'https://github.com/RayJiang16/XYEureka'
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.resources = "Sources/Core/Resource/**/*"
 
-  s.dependency 'Eureka', '~> 5.1'
+  s.dependency 'Eureka', '~> 5.2'
   s.dependency 'SnapKit'
 
 end
