@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install Carthage
-      run: brew install carthage
-    - name: Install Dependency
-      run: carthage update --new-resolver --platform iOS --no-use-binaries --cache-builds
+    - name: Install CocoaPods
+      run: sudo gem install cocoapods
+    - name: Pod Install
+      run: pod install
     - name: Build
       run: xcodebuild -project XYEureka.xcodeproj -scheme XYEureka -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
