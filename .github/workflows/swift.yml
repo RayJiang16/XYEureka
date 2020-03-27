@@ -19,4 +19,4 @@ jobs:
     - name: Pod Install
       run: pod install
     - name: Build
-      run: xcodebuild -project XYEureka.xcodeproj -scheme XYEureka -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+      run: xcodebuild -workspace XYEureka.xcworkspace -scheme Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
