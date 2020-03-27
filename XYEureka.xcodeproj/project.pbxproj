@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0C3271C11EFA852F401F6E /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FB1AFEEE9BD761A4D48C9E /* Pods_Example.framework */; };
+		7146ECF8242DF25900502AE6 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7146ECF7242DF25900502AE6 /* Cartfile */; };
+		71A9A926242DEF2B001B2313 /* Ex+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9A925242DEF2B001B2313 /* Ex+Row.swift */; };
+		71A9A928242DF0A3001B2313 /* XYBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9A927242DF0A3001B2313 /* XYBaseProtocol.swift */; };
 		A56D991223029B8D00234FC5 /* Ex+Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D991123029B8D00234FC5 /* Ex+Form.swift */; };
 		A56D99152302A25800234FC5 /* Ex+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D99142302A25800234FC5 /* Ex+Condition.swift */; };
 		A5881CE122FBBA9E00A3A64F /* XYEureka.h in Headers */ = {isa = PBXBuildFile; fileRef = A5881CDF22FBBA9E00A3A64F /* XYEureka.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,7 +18,7 @@
 		A5881CFD22FBBF5500A3A64F /* XYFormInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881CFC22FBBF5500A3A64F /* XYFormInputAccessoryView.swift */; };
 		A5881CFF22FBC00500A3A64F /* Ex+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881CFE22FBC00500A3A64F /* Ex+UIColor.swift */; };
 		A5881D0122FBC07400A3A64F /* Ex+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881D0022FBC07400A3A64F /* Ex+Section.swift */; };
-		A5881D0522FBC16700A3A64F /* XYConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881D0422FBC16700A3A64F /* XYConstant.swift */; };
+		A5881D0522FBC16700A3A64F /* XYEurekaConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881D0422FBC16700A3A64F /* XYEurekaConstant.swift */; };
 		A5881D0C22FBCBE400A3A64F /* Ex+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881D0B22FBCBE400A3A64F /* Ex+String.swift */; };
 		A5881D0E22FBEA0700A3A64F /* XYBaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881D0D22FBEA0700A3A64F /* XYBaseRow.swift */; };
 		A5881D1022FBEA2300A3A64F /* XYFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5881D0F22FBEA2300A3A64F /* XYFieldCell.swift */; };
@@ -29,15 +33,10 @@
 		A5CA2374231379F1003E4E57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CA2372231379F1003E4E57 /* LaunchScreen.storyboard */; };
 		A5CA237923137A07003E4E57 /* XYEureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881CDC22FBBA9E00A3A64F /* XYEureka.framework */; };
 		A5CA237A23137A07003E4E57 /* XYEureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5881CDC22FBBA9E00A3A64F /* XYEureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A5CA237E23137A10003E4E57 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881CF822FBBEF000A3A64F /* Eureka.framework */; };
-		A5CA237F23137A10003E4E57 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5881CF822FBBEF000A3A64F /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5CA238123137A3E003E4E57 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA238023137A3E003E4E57 /* TestViewController.swift */; };
-		A5CA238223137BB4003E4E57 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881D0622FBC79F00A3A64F /* SnapKit.framework */; };
-		A5CA238323137BB4003E4E57 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5881D0622FBC79F00A3A64F /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5DA09DB22FD11F9008B6C89 /* XYTextLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DA09DA22FD11F9008B6C89 /* XYTextLimit.swift */; };
-		A5DB89AC22FC267B00B00254 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881CF822FBBEF000A3A64F /* Eureka.framework */; };
-		A5DB89AD22FC267B00B00254 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5881D0622FBC79F00A3A64F /* SnapKit.framework */; };
 		A5F019732306814600EB8E5A /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F019722306814600EB8E5A /* Asset.xcassets */; };
+		D38500360DFE013B946EBF5E /* Pods_XYEureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D604694AEC06E02968511C /* Pods_XYEureka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A5CA238323137BB4003E4E57 /* SnapKit.framework in Embed Frameworks */,
 				A5CA237A23137A07003E4E57 /* XYEureka.framework in Embed Frameworks */,
-				A5CA237F23137A10003E4E57 /* Eureka.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +64,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A521BE74237259180042F919 /* XYEureka.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XYEureka.podspec; sourceTree = "<group>"; };
+		07D604694AEC06E02968511C /* Pods_XYEureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYEureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30DCACD47A588A1231897762 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		7146ECF7242DF25900502AE6 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		71A9A925242DEF2B001B2313 /* Ex+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Row.swift"; sourceTree = "<group>"; };
+		71A9A927242DF0A3001B2313 /* XYBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYBaseProtocol.swift; sourceTree = "<group>"; };
+		78FB1AFEEE9BD761A4D48C9E /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CD5B9BAAB4560C220760D6 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A521BE74237259180042F919 /* XYEureka.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = XYEureka.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A56D991123029B8D00234FC5 /* Ex+Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Form.swift"; sourceTree = "<group>"; };
 		A56D99142302A25800234FC5 /* Ex+Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Condition.swift"; sourceTree = "<group>"; };
 		A5881CDC22FBBA9E00A3A64F /* XYEureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XYEureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +82,7 @@
 		A5881CFC22FBBF5500A3A64F /* XYFormInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYFormInputAccessoryView.swift; sourceTree = "<group>"; };
 		A5881CFE22FBC00500A3A64F /* Ex+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIColor.swift"; sourceTree = "<group>"; };
 		A5881D0022FBC07400A3A64F /* Ex+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Section.swift"; sourceTree = "<group>"; };
-		A5881D0422FBC16700A3A64F /* XYConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYConstant.swift; sourceTree = "<group>"; };
+		A5881D0422FBC16700A3A64F /* XYEurekaConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYEurekaConstant.swift; sourceTree = "<group>"; };
 		A5881D0622FBC79F00A3A64F /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		A5881D0B22FBCBE400A3A64F /* Ex+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+String.swift"; sourceTree = "<group>"; };
 		A5881D0D22FBEA0700A3A64F /* XYBaseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYBaseRow.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		A5CA238023137A3E003E4E57 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A5DA09DA22FD11F9008B6C89 /* XYTextLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYTextLimit.swift; sourceTree = "<group>"; };
 		A5F019722306814600EB8E5A /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		BA973E57E96FD0D4A7F42943 /* Pods-XYEureka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYEureka.release.xcconfig"; path = "Target Support Files/Pods-XYEureka/Pods-XYEureka.release.xcconfig"; sourceTree = "<group>"; };
+		D35AFE1170AD5189C75E5AC4 /* Pods-XYEureka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYEureka.debug.xcconfig"; path = "Target Support Files/Pods-XYEureka/Pods-XYEureka.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5DB89AC22FC267B00B00254 /* Eureka.framework in Frameworks */,
-				A5DB89AD22FC267B00B00254 /* SnapKit.framework in Frameworks */,
+				D38500360DFE013B946EBF5E /* Pods_XYEureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,23 +118,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5CA238223137BB4003E4E57 /* SnapKit.framework in Frameworks */,
 				A5CA237923137A07003E4E57 /* XYEureka.framework in Frameworks */,
-				A5CA237E23137A10003E4E57 /* Eureka.framework in Frameworks */,
+				3F0C3271C11EFA852F401F6E /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3936A7424A6DEA98D67A5209 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84CD5B9BAAB4560C220760D6 /* Pods-Example.debug.xcconfig */,
+				30DCACD47A588A1231897762 /* Pods-Example.release.xcconfig */,
+				D35AFE1170AD5189C75E5AC4 /* Pods-XYEureka.debug.xcconfig */,
+				BA973E57E96FD0D4A7F42943 /* Pods-XYEureka.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5881CD222FBBA9E00A3A64F = {
 			isa = PBXGroup;
 			children = (
+				7146ECF7242DF25900502AE6 /* Cartfile */,
 				A521BE74237259180042F919 /* XYEureka.podspec */,
 				A5881CDE22FBBA9E00A3A64F /* Sources */,
 				A5CA2368231379F0003E4E57 /* Example */,
 				A5881CDD22FBBA9E00A3A64F /* Products */,
 				A5881CF722FBBEF000A3A64F /* Frameworks */,
+				3936A7424A6DEA98D67A5209 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				A5881CDF22FBBA9E00A3A64F /* XYEureka.h */,
-				A5881CF222FBBD8900A3A64F /* Core */,
 				A5881CE022FBBA9E00A3A64F /* Info.plist */,
+				A5881CF222FBBD8900A3A64F /* Core */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -155,7 +172,7 @@
 		A5881CF222FBBD8900A3A64F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A5881D0422FBC16700A3A64F /* XYConstant.swift */,
+				A5881D0422FBC16700A3A64F /* XYEurekaConstant.swift */,
 				A5881CF622FBBE1900A3A64F /* Base */,
 				A5881CF522FBBDCE00A3A64F /* Row */,
 				A5881CF422FBBDC800A3A64F /* Protocol */,
@@ -169,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				A56D991123029B8D00234FC5 /* Ex+Form.swift */,
+				71A9A925242DEF2B001B2313 /* Ex+Row.swift */,
 				A5881D0022FBC07400A3A64F /* Ex+Section.swift */,
 				A56D99142302A25800234FC5 /* Ex+Condition.swift */,
 				A5881CFE22FBC00500A3A64F /* Ex+UIColor.swift */,
@@ -180,6 +198,7 @@
 		A5881CF422FBBDC800A3A64F /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				71A9A927242DF0A3001B2313 /* XYBaseProtocol.swift */,
 				A5881D1722FBF0B000A3A64F /* XYPickerRowType.swift */,
 				A5DA09DA22FD11F9008B6C89 /* XYTextLimit.swift */,
 			);
@@ -212,6 +231,8 @@
 			children = (
 				A5881D0622FBC79F00A3A64F /* SnapKit.framework */,
 				A5881CF822FBBEF000A3A64F /* Eureka.framework */,
+				78FB1AFEEE9BD761A4D48C9E /* Pods_Example.framework */,
+				07D604694AEC06E02968511C /* Pods_XYEureka.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,6 +277,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5881CE422FBBA9E00A3A64F /* Build configuration list for PBXNativeTarget "XYEureka" */;
 			buildPhases = (
+				C12084BA0FA4F2C0A75E7A4B /* [CP] Check Pods Manifest.lock */,
 				A5881CD722FBBA9E00A3A64F /* Headers */,
 				A5881CD822FBBA9E00A3A64F /* Sources */,
 				A5881CD922FBBA9E00A3A64F /* Frameworks */,
@@ -274,9 +296,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5CA2378231379F1003E4E57 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
+				86769E5B586627EEE7C6DD19 /* [CP] Check Pods Manifest.lock */,
 				A5CA2363231379F0003E4E57 /* Sources */,
 				A5CA2364231379F0003E4E57 /* Frameworks */,
 				A5CA2365231379F0003E4E57 /* Resources */,
+				3702DAD5574D97E41AB34EDC /* [CP] Embed Pods Frameworks */,
 				A5CA237D23137A07003E4E57 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -332,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7146ECF8242DF25900502AE6 /* Cartfile in Resources */,
 				A5F019732306814600EB8E5A /* Asset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +373,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3702DAD5574D97E41AB34EDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86769E5B586627EEE7C6DD19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12084BA0FA4F2C0A75E7A4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XYEureka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5881CD822FBBA9E00A3A64F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -358,7 +447,7 @@
 				A5DA09DB22FD11F9008B6C89 /* XYTextLimit.swift in Sources */,
 				A5881D0C22FBCBE400A3A64F /* Ex+String.swift in Sources */,
 				A5881CFB22FBBF1300A3A64F /* XYFormViewController.swift in Sources */,
-				A5881D0522FBC16700A3A64F /* XYConstant.swift in Sources */,
+				A5881D0522FBC16700A3A64F /* XYEurekaConstant.swift in Sources */,
 				A5881D1A22FBF15600A3A64F /* XYDatePickerRow.swift in Sources */,
 				A5881D1622FBF09A00A3A64F /* XYPickerRow.swift in Sources */,
 				A56D99152302A25800234FC5 /* Ex+Condition.swift in Sources */,
@@ -367,7 +456,9 @@
 				A56D991223029B8D00234FC5 /* Ex+Form.swift in Sources */,
 				A5881CFD22FBBF5500A3A64F /* XYFormInputAccessoryView.swift in Sources */,
 				A5881CFF22FBC00500A3A64F /* Ex+UIColor.swift in Sources */,
+				71A9A928242DF0A3001B2313 /* XYBaseProtocol.swift in Sources */,
 				A5881D1022FBEA2300A3A64F /* XYFieldCell.swift in Sources */,
+				71A9A926242DEF2B001B2313 /* Ex+Row.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +626,7 @@
 		};
 		A5881CE522FBBA9E00A3A64F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35AFE1170AD5189C75E5AC4 /* Pods-XYEureka.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -567,6 +659,7 @@
 		};
 		A5881CE622FBBA9E00A3A64F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA973E57E96FD0D4A7F42943 /* Pods-XYEureka.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -598,6 +691,7 @@
 		};
 		A5CA2376231379F1003E4E57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84CD5B9BAAB4560C220760D6 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -622,6 +716,7 @@
 		};
 		A5CA2377231379F1003E4E57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30DCACD47A588A1231897762 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

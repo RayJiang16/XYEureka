@@ -16,7 +16,6 @@ class TestViewController: XYFormViewController {
         super.viewDidLoad()
         setupForm()
     }
-    
 
     private func setupForm() {
         form +++
@@ -38,6 +37,17 @@ class TestViewController: XYFormViewController {
                 cell.hasMustAndArrow = true
                 cell.style = .month
             })
+            <<< XYNormalRow("t1").cellSetup({ (cell, row) in
+                row.title = "Test1"
+                row.hasArrow = true
+            })
+            <<< XYNormalRow("t2").cellSetup({ (cell, row) in
+                row.title = "Test2"
+                row.hasMust = true
+            })
+            <<< XYNormalRow("t3").cellSetup({ (cell, row) in
+                row.title = "Test3"
+                row.hasMustAndArrow = true
+            })
     }
-
 }

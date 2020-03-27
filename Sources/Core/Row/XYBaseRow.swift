@@ -9,7 +9,7 @@
 import UIKit
 import Eureka
 
-open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
+open class _XYBaseCell<T>: Cell<T>, CellType, XYBaseProtocol where T: Equatable {
     
     public var hasMustAndArrow: Bool {
         set {
@@ -36,21 +36,21 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
         let view = UILabel()
         view.isHidden = true
         view.text = "*"
-        view.textColor = XYConstant.redText
+        view.textColor = XYEurekaConstant.redText
         view.font = UIFont.systemFont(ofSize: 16)
         return view
     }()
     public private(set) lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.numberOfLines = 2
-        view.textColor = XYConstant.mainText
+        view.textColor = XYEurekaConstant.mainText
         view.font = UIFont.systemFont(ofSize: 14)
         return view
     }()
     public private(set) lazy var subLabel: UILabel = {
         let view = UILabel()
         view.textAlignment = .right
-        view.textColor = XYConstant.subText
+        view.textColor = XYEurekaConstant.subText
         view.font = UIFont.systemFont(ofSize: 14)
         return view
     }()
@@ -62,7 +62,7 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
     }()
     public private(set) lazy var lineView: UIView = {
         let view = UIView()
-        view.backgroundColor = XYConstant.lineColor
+        view.backgroundColor = XYEurekaConstant.lineColor
         return view
     }()
     
@@ -86,7 +86,7 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
     override open func update() {
         // super.update() 执行的内容
         selectionStyle = row.isDisabled ? .none : .default
-        if row.isDisabled && XYConstant.hiddenMustDotWhenDisabled {
+        if row.isDisabled && XYEurekaConstant.hiddenMustDotWhenDisabled {
             hasMust = false
         }
         titleLabel.text = row.title
@@ -132,8 +132,10 @@ open class _XYBaseCell<T>: Cell<T>, CellType where T: Equatable {
             maker.right.equalTo(arrowImageView.snp.left).offset(-5)
         }
         lineView.snp.makeConstraints { (maker) in
-            maker.left.equalToSuperview().offset(15)
-            maker.bottom.right.equalToSuperview()
+            let edges = XYEurekaConstant.lineEdges
+            maker.left.equalToSuperview().offset(edges.left)
+            maker.right.equalToSuperview().offset(-edges.right)
+            maker.bottom.equalToSuperview().offset(-edges.bottom)
             maker.height.equalTo(0.5)
         }
     }

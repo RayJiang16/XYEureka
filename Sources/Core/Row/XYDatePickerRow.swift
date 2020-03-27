@@ -323,7 +323,7 @@ open class _XYDatePickerCell: _XYBaseCell<Date>, UIPickerViewDataSource, UIPicke
         
         let attr = NSMutableAttributedString(string: str)
         attr.addAttribute(.font, value: UIFont.systemFont(ofSize: 13), range: NSRange(location: 0, length: attr.length))
-        attr.addAttribute(.foregroundColor, value: XYConstant.mainText, range: NSRange(location: 0, length: attr.length))
+        attr.addAttribute(.foregroundColor, value: XYEurekaConstant.mainText, range: NSRange(location: 0, length: attr.length))
         return attr
     }
     

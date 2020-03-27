@@ -1,5 +1,5 @@
 //
-//  XYConstant.swift
+//  XYEurekaConstant.swift
 //  XYEureka
 //
 //  Created by RayJiang on 2019/8/8.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class XYConstant {
+public class XYEurekaConstant {
     
-    private static let shared = XYConstant()
+    private static let shared = XYEurekaConstant()
     
     private init() { }
     
@@ -19,6 +19,7 @@ public class XYConstant {
     private var subText: UIColor?
     private var redText: UIColor?
     private var lineColor: UIColor?
+    private var lineEdges: UIEdgeInsets?
     private var hiddenMustDotWhenDisabled: Bool = true
     
     
@@ -54,6 +55,14 @@ public class XYConstant {
             shared.lineColor = newValue
         }
     }
+    public static var lineEdges: UIEdgeInsets {
+        get {
+            if let edges = shared.lineEdges { return edges }
+            return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        } set {
+            shared.lineEdges = newValue
+        }
+    }
     public static var hiddenMustDotWhenDisabled: Bool {
         get {
             return shared.hiddenMustDotWhenDisabled
@@ -61,6 +70,4 @@ public class XYConstant {
             shared.hiddenMustDotWhenDisabled = newValue
         }
     }
-    
-    
 }

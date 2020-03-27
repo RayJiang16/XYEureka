@@ -13,7 +13,7 @@ final class XYFormInputAccessoryView: UIToolbar {
     public private(set) lazy var titleLabel: UILabel = {
         let view = UILabel()
         view.text = ""
-        view.textColor = XYConstant.mainText
+        view.textColor = XYEurekaConstant.mainText
         view.font = UIFont.systemFont(ofSize: 14)
         view.textAlignment = .center
         return view
@@ -38,8 +38,8 @@ final class XYFormInputAccessoryView: UIToolbar {
             maker.centerX.equalToSuperview()
         }
         
-        doneButton.setTitleTextAttributes([.foregroundColor:XYConstant.mainText], for: .normal)
-        doneButton.setTitleTextAttributes([.foregroundColor:XYConstant.mainText], for: .highlighted)
+        doneButton.setTitleTextAttributes([.foregroundColor:XYEurekaConstant.mainText], for: .normal)
+        doneButton.setTitleTextAttributes([.foregroundColor:XYEurekaConstant.mainText], for: .highlighted)
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         setItems([flexibleSpace, doneButton], animated: false)
     }

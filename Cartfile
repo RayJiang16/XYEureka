@@ -1,9 +1,9 @@
-github "xmartlabs/Eureka" ~> 5.0
 github "SnapKit/SnapKit"
+github "xmartlabs/Eureka"
+
 
 # How to update
-# carthage update --new-resolver --platform iOS --no-use-binaries --cache-builds
+# carthage update --platform iOS --no-use-binaries --new-resolver --cache-builds
 
 # How to install Carthage
 # brew install carthage
-
