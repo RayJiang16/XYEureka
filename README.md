@@ -1,5 +1,11 @@
 ## XYEureka
 
+[![GitHub Actions](https://github.com/RayJiang16/XYEureka/workflows/build/badge.svg?branch=master)](https://github.com/RayJiang16/XYEureka/actions?query=workflow%3Abuild)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/XYEureka.svg)](https://cocoapods.org/pods/XYEureka)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Platform](https://img.shields.io/cocoapods/p/XYEureka.svg?style=flat)](./)
+[![License](https://img.shields.io/cocoapods/l/XYEureka.svg?style=flat)](./LICENSE)
+
 基于 [Eureka](https://github.com/xmartlabs/Eureka) 进行二次开发，重写了一套 UI 层的 row，以及增加了一些方便方法。
 
 
