@@ -32,8 +32,8 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
         selectionStyle = .none
         textField = UITextField()
         textField.delegate = self
-        textField.textColor = .subText
-        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.textColor = XYEurekaConstant.subText
+        textField.font = XYEurekaConstant.subFont
         textField.textAlignment = .right
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -61,8 +61,8 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
             hasMust = false
         }
         titleLabel.text = row.title
-        titleLabel.textColor = row.isHighlighted ? tintColor : .mainText
         super.layoutSubviews()
+        titleLabel.textColor = row.isHighlighted ? tintColor : XYEurekaConstant.mainText
         
         if textField.isFirstResponder { return }
         
@@ -70,9 +70,9 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
         textField.isEnabled = !row.isDisabled
         if let placeholder = (row as? FieldRowConformance)?.placeholder {
             if let color = (row as? FieldRowConformance)?.placeholderColor {
-                textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: color, .font:UIFont.systemFont(ofSize: 14)])
+                textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: color, .font:XYEurekaConstant.subFont])
             } else {
-                textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.font:UIFont.systemFont(ofSize: 14)])
+                textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.font:XYEurekaConstant.subFont])
             }
         }
     }

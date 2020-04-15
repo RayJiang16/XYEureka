@@ -66,7 +66,7 @@ open class _XYDatePickerCell: _XYBaseCell<Date>, UIPickerViewDataSource, UIPicke
     
     override open func update() {
         super.update()
-        titleLabel.textColor = row.isHighlighted ? tintColor : .mainText
+        titleLabel.textColor = row.isHighlighted ? tintColor : XYEurekaConstant.mainText
         
         guard let value = pickerRow?.dateStr else { return }
         let text = value.isEmpty ? (pickerRow?.noValueDisplayText ?? "") : value

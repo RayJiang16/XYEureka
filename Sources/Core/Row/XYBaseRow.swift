@@ -44,14 +44,14 @@ open class _XYBaseCell<T>: Cell<T>, CellType, XYBaseProtocol where T: Equatable 
         let view = UILabel()
         view.numberOfLines = 2
         view.textColor = XYEurekaConstant.mainText
-        view.font = UIFont.systemFont(ofSize: 14)
+        view.font = XYEurekaConstant.titleFont
         return view
     }()
     public private(set) lazy var subLabel: UILabel = {
         let view = UILabel()
         view.textAlignment = .right
         view.textColor = XYEurekaConstant.subText
-        view.font = UIFont.systemFont(ofSize: 14)
+        view.font = XYEurekaConstant.subFont
         return view
     }()
     public private(set) lazy var arrowImageView: UIImageView = {

@@ -42,7 +42,7 @@ open class _XYPickerCell<T>: _XYBaseCell<T>, UIPickerViewDataSource, UIPickerVie
     
     override open func update() {
         super.update()
-        titleLabel.textColor = row.isHighlighted ? tintColor : .mainText
+        titleLabel.textColor = row.isHighlighted ? tintColor : XYEurekaConstant.mainText
         
         guard let value = row.value as? XYPickerRowType else { return }
         let text = value.name.isEmpty ? (pickerRow?.noValueDisplayText ?? "") : value.name

@@ -14,7 +14,7 @@ final class XYFormInputAccessoryView: UIToolbar {
         let view = UILabel()
         view.text = ""
         view.textColor = XYEurekaConstant.mainText
-        view.font = UIFont.systemFont(ofSize: 14)
+        view.font = XYEurekaConstant.titleFont
         view.textAlignment = .center
         return view
     }()

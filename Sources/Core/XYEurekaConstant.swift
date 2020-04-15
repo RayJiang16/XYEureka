@@ -20,6 +20,8 @@ public class XYEurekaConstant {
     private var redText: UIColor?
     private var lineColor: UIColor?
     private var lineEdges: UIEdgeInsets?
+    private var titleFont: UIFont?
+    private var subFont: UIFont?
     private var hiddenMustDotWhenDisabled: Bool = true
     
     
@@ -61,6 +63,22 @@ public class XYEurekaConstant {
             return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
         } set {
             shared.lineEdges = newValue
+        }
+    }
+    public static var titleFont: UIFont {
+        get {
+            if let font = shared.titleFont { return font }
+            return UIFont.systemFont(ofSize: 14)
+        } set {
+            shared.titleFont = newValue
+        }
+    }
+    public static var subFont: UIFont {
+        get {
+            if let font = shared.subFont { return font }
+            return UIFont.systemFont(ofSize: 14)
+        } set {
+            shared.subFont = newValue
         }
     }
     public static var hiddenMustDotWhenDisabled: Bool {
