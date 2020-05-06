@@ -93,11 +93,18 @@ open class _XYPickerCell<T>: _XYBaseCell<T>, UIPickerViewDataSource, UIPickerVie
         return pickerRow?.options.count ?? 0
     }
     
-    open func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    open func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let str: String
         if let options = pickerRow?.options as? [XYPickerRowType] {
-            return options[row].name
+            str = options[row].name
+        } else {
+            str = pickerRow?.displayValueFor?(pickerRow?.options[row]) ?? ""
         }
-        return pickerRow?.displayValueFor?(pickerRow?.options[row])
+        
+        let attr = NSMutableAttributedString(string: str)
+        attr.addAttribute(.font, value: XYEurekaConstant.subFont, range: NSRange(location: 0, length: attr.length))
+        attr.addAttribute(.foregroundColor, value: XYEurekaConstant.pickerText, range: NSRange(location: 0, length: attr.length))
+        return attr
     }
     
     open func pickerView(_ pickerView: UIPickerView, didSelectRow rowNumber: Int, inComponent component: Int) {

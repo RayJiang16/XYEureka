@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F0C3271C11EFA852F401F6E /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FB1AFEEE9BD761A4D48C9E /* Pods_Example.framework */; };
+		710C8E4A24625524001F2B97 /* PickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C8E4924625524001F2B97 /* PickerModel.swift */; };
 		7146ECF8242DF25900502AE6 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 7146ECF7242DF25900502AE6 /* Cartfile */; };
 		71A9A926242DEF2B001B2313 /* Ex+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9A925242DEF2B001B2313 /* Ex+Row.swift */; };
 		71A9A928242DF0A3001B2313 /* XYBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9A927242DF0A3001B2313 /* XYBaseProtocol.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		07D604694AEC06E02968511C /* Pods_XYEureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYEureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DCACD47A588A1231897762 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		710C8E4924625524001F2B97 /* PickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModel.swift; sourceTree = "<group>"; };
 		7146ECF7242DF25900502AE6 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		71A9A925242DEF2B001B2313 /* Ex+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+Row.swift"; sourceTree = "<group>"; };
 		71A9A927242DF0A3001B2313 /* XYBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYBaseProtocol.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				A5CA2369231379F0003E4E57 /* AppDelegate.swift */,
 				A5CA236B231379F0003E4E57 /* ViewController.swift */,
 				A5CA238023137A3E003E4E57 /* TestViewController.swift */,
+				710C8E4924625524001F2B97 /* PickerModel.swift */,
 				A5CA236D231379F0003E4E57 /* Main.storyboard */,
 				A5CA2370231379F1003E4E57 /* Assets.xcassets */,
 				A5CA2372231379F1003E4E57 /* LaunchScreen.storyboard */,
@@ -469,6 +472,7 @@
 				A5CA236C231379F0003E4E57 /* ViewController.swift in Sources */,
 				A5CA238123137A3E003E4E57 /* TestViewController.swift in Sources */,
 				A5CA236A231379F0003E4E57 /* AppDelegate.swift in Sources */,
+				710C8E4A24625524001F2B97 /* PickerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

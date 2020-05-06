@@ -15,6 +15,7 @@ class TestViewController: XYFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupForm()
+        
     }
 
     private func setupForm() {
@@ -34,19 +35,12 @@ class TestViewController: XYFormViewController {
             <<< XYDatePickerRow("r2").cellSetup({ (cell, row) in
                 row.title = "时间"
                 row.format = "yyyy年MM月"
-                cell.hasMustAndArrow = true
+                row.hasMustAndArrow = true
                 cell.style = .month
             })
-            <<< XYNormalRow("t1").cellSetup({ (cell, row) in
-                row.title = "Test1"
-                row.hasArrow = true
-            })
-            <<< XYNormalRow("t2").cellSetup({ (cell, row) in
-                row.title = "Test2"
-                row.hasMust = true
-            })
-            <<< XYNormalRow("t3").cellSetup({ (cell, row) in
-                row.title = "Test3"
+            <<< XYPickerRow<PickerModel>("r3").cellSetup({ (cell, row) in
+                row.title = "选择"
+                row.options = [PickerModel(name: "1"), PickerModel(name: "2")]
                 row.hasMustAndArrow = true
             })
     }

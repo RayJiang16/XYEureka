@@ -18,6 +18,7 @@ public class XYEurekaConstant {
     private var mainText: UIColor?
     private var subText: UIColor?
     private var redText: UIColor?
+    private var pickerText: UIColor?
     private var lineColor: UIColor?
     private var lineEdges: UIEdgeInsets?
     private var titleFont: UIFont?
@@ -47,6 +48,14 @@ public class XYEurekaConstant {
             return UIColor.redText
         } set {
             shared.redText = newValue
+        }
+    }
+    public static var pickerText: UIColor {
+        get {
+            if let color = shared.pickerText { return color }
+            return UIColor.mainText
+        } set {
+            shared.pickerText = newValue
         }
     }
     public static var lineColor: UIColor {
