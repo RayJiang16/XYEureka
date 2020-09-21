@@ -37,7 +37,8 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
         textField.textAlignment = .right
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        addSubview(textField)
+        
+        contentView.addSubview(textField)
         textField.snp.remakeConstraints { (maker) in
             maker.top.bottom.equalToSuperview()
             maker.left.equalTo(snp.centerX).offset(-100)

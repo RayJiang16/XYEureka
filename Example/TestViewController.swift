@@ -15,7 +15,6 @@ class TestViewController: XYFormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupForm()
-        
     }
 
     private func setupForm() {
@@ -42,6 +41,9 @@ class TestViewController: XYFormViewController {
                 row.title = "选择"
                 row.options = [PickerModel(name: "1"), PickerModel(name: "2")]
                 row.hasMustAndArrow = true
+            })
+            <<< XYIntTextRow("r4").cellSetup({ (cell, row) in
+                row.title = "请输入内容"
             })
     }
 }

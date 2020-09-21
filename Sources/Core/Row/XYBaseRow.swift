@@ -115,11 +115,11 @@ open class _XYBaseCell<T>: Cell<T>, CellType, XYBaseProtocol where T: Equatable 
     }
     
     private func setupView() {
-        addSubview(mustDot)
-        addSubview(titleLabel)
-        addSubview(subLabel)
-        addSubview(arrowImageView)
-        addSubview(lineView)
+        contentView.addSubview(mustDot)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(subLabel)
+        contentView.addSubview(arrowImageView)
+        contentView.addSubview(lineView)
         
         titleLabel.snp.makeConstraints { (maker) in
             maker.top.bottom.equalToSuperview()
