@@ -12,9 +12,9 @@
 
 ## 要求
 
-- iOS 8.0+
-- Swift 5.0+
-- Xcode 11.0+
+- iOS 10.0+
+- Swift 5.3+
+- Xcode 12.0+
 
 
 
