@@ -45,6 +45,8 @@ open class _XYBaseCell<T>: Cell<T>, CellType, XYBaseProtocol where T: Equatable 
         view.numberOfLines = 2
         view.textColor = XYEurekaConstant.mainText
         view.font = XYEurekaConstant.titleFont
+        view.setContentHuggingPriority(.required, for: .horizontal)
+        view.setContentCompressionResistancePriority(.required, for: .horizontal)
         return view
     }()
     public private(set) lazy var subLabel: UILabel = {
@@ -124,11 +126,10 @@ open class _XYBaseCell<T>: Cell<T>, CellType, XYBaseProtocol where T: Equatable 
         titleLabel.snp.makeConstraints { (maker) in
             maker.top.bottom.equalToSuperview()
             maker.left.equalTo(mustDot.snp.right).offset(2)
-            maker.right.equalToSuperview().offset(-10)
         }
         subLabel.snp.makeConstraints { (maker) in
             maker.top.bottom.equalToSuperview()
-            maker.left.equalTo(snp.centerX).offset(-100)
+            maker.left.equalTo(titleLabel.snp.right).offset(10)
             maker.right.equalTo(arrowImageView.snp.left).offset(-5)
         }
         lineView.snp.makeConstraints { (maker) in
