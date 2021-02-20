@@ -44,15 +44,18 @@ open class _XYFieldCell<T> : _XYBaseCell<T>, UITextFieldDelegate, TextFieldCell 
             maker.left.equalTo(snp.centerX).offset(-100)
             maker.right.equalTo(subLabel.snp.left).offset(-3)
         }
+        subLabel.snp.remakeConstraints { (maker) in
+            maker.top.bottom.equalToSuperview()
+            maker.right.equalToSuperview().offset(-10)
+            maker.width.equalTo(0)
+        }
     }
     
     open override func layoutSubviews() {
         super.layoutSubviews()
         let width = (subLabel.text ?? "").widthWithConstrained(height: 1000, font: subLabel.font)
-        subLabel.snp.remakeConstraints { (maker) in
-            maker.right.equalToSuperview().offset(-10)
-            maker.centerY.equalToSuperview()
-            maker.width.equalTo(width)
+        subLabel.snp.updateConstraints { (update) in
+            update.width.equalTo(width)
         }
     }
     
