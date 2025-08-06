@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/Core/**/*.swift'
 
   s.frameworks = 'UIKit'
-  s.resources = "Sources/Core/Resource/**/*"
+  s.resource_bundles = { 'XYEureka' => 'Sources/Core/Resource/**/*' }
 
   s.dependency 'Eureka', '~> 5.3'
   s.dependency 'SnapKit'

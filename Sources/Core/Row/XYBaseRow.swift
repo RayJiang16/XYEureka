@@ -57,8 +57,7 @@ open class _XYBaseCell<T>: Cell<T>, CellType, XYBaseProtocol where T: Equatable 
         return view
     }()
     public private(set) lazy var arrowImageView: UIImageView = {
-        let bundle = Bundle(for: _XYBaseCell.self)
-        let view = UIImageView(image: UIImage(named: "Arrow", in: bundle, compatibleWith: nil))
+        let view = UIImageView(image: Bundle.image(named: "Arrow"))
         view.isHidden = true
         return view
     }()
@@ -170,3 +169,19 @@ public final class XYNormalRow: Row<XYBaseCell>, RowType, NoValueDisplayTextConf
     }
 }
 
+extension Bundle {
+    
+    private class _BundleClass { }
+    
+    static let current: Bundle = {
+        let bundle = Bundle(for: _BundleClass.self)
+        guard let url = bundle.url(forResource: "XYEureka", withExtension: "bundle"), let resource = Bundle(url: url) else {
+            return bundle
+        }
+        return resource
+    }()
+    
+    static func image(named: String) -> UIImage? {
+        return UIImage(named: named, in: current, compatibleWith: nil)
+    }
+}
